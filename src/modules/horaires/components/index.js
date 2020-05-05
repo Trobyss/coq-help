@@ -1,0 +1,1 @@
+export { FermeturePeriod } from "./Fermeture";
