@@ -8,6 +8,7 @@ export const DateRange = (props) => {
   return (
     <DateWrapper>
       <DateRangePicker
+        isOpen={true}
         calendarIcon={<CalendarIcon />}
         clearIcon={null}
         onChange={props.handleDateChange(props.index)}
@@ -47,6 +48,7 @@ export const DateRangeWhite = (props) => {
   return (
     <DateWrapperWhite>
       <DateRangePicker
+        isOpen={true}
         calendarIcon={<CalendarIcon />}
         clearIcon={null}
         onChange={props.handleDateChange(props.index)}
