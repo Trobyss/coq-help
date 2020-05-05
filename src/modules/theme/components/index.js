@@ -17,6 +17,7 @@ export const CheckBox = (props) => (
       onChange={props.onChange}
       defaultChecked={props.defaultChecked}
       type="checkbox"
+      className={props.defaultChecked ? "checked" : null}
     />
     <span className="checkmark"></span>
   </CheckBoxContainer>
@@ -58,11 +59,6 @@ const CheckBoxContainer = styled.label`
     background-color: #66a3ff;
   }
 
-  /* When the checkbox is checked, add a blue background */
-  input:checked ~ .checkmark {
-    background-color: #66a3ff;
-  }
-
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
     content: "";
@@ -70,8 +66,12 @@ const CheckBoxContainer = styled.label`
     display: none;
   }
 
+  /* When the checkbox is checked, add a blue background */
+  .checked ~ .checkmark {
+    background-color: #66a3ff;
+  }
   /* Show the checkmark when checked */
-  input:checked ~ .checkmark:after {
+  .checked ~ .checkmark:after {
     display: block;
   }
 

@@ -25,8 +25,8 @@ export function usePeriods() {
     oldWeek[day] = {
       ...oldWeek[day],
       [type]: {
-        hours: Number(time.split(":")[0]),
-        minutes: Number(time.split(":")[1]),
+        hours: time.split(":")[0],
+        minutes: time.split(":")[1],
       },
     };
 

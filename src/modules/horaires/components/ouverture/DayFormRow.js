@@ -58,13 +58,15 @@ export const DayFormRow = (props) => {
                 |
               </>
             )}
-          {props.numberCopy === props.dayNumber ? (
-            <DayAction underline>Copié</DayAction>
-          ) : (
-            <DayAction onClick={props.handleCopy}>Copier</DayAction>
-          )}
-
-          {props.numberCopy !== props.dayNumber && (
+          {props.numberCopy === props.dayNumber &&
+            !props.defaultValue.options.closed && (
+              <DayAction underline>Copié</DayAction>
+            )}
+          {props.numberCopy !== props.dayNumber &&
+            !props.defaultValue.options.closed && (
+              <DayAction onClick={props.handleCopy}>Copier</DayAction>
+            )}
+          {props.numberCopy !== props.dayNumber && props.numberCopy !== null && (
             <>
               |<DayAction onClick={props.handlePaste}>Coller</DayAction>
             </>

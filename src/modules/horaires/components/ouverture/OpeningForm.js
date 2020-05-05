@@ -22,7 +22,6 @@ export const OpeningForm = (props) => {
       return;
     }
     handlePaste(props.period, numberCopy, number);
-    setNumberCopy(null);
   };
 
   return (

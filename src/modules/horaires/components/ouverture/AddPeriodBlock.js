@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const AddPeriodBlock = (props) => {
   return (
-    <AddPeriodBlockWrapper>
-      <AddPeriodBlockButton onClick={props.handleAddPeriod}>
+    <AddPeriodBlockWrapper onClick={props.handleAddPeriod}>
+      <AddPeriodBlockButton>
         + Ajouter une période d'horaire
       </AddPeriodBlockButton>
     </AddPeriodBlockWrapper>
@@ -18,6 +18,7 @@ const AddPeriodBlockWrapper = styled.div`
   width: 100%;
   padding: 30px 20px;
   margin: 15px 0;
+  cursor: pointer;
 `;
 const AddPeriodBlockButton = styled.div`
   display: flex;
